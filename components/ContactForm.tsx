@@ -17,27 +17,41 @@ export default function ContactForm() {
     e.preventDefault()
     setStatus('submitting')
 
-    // In a production environment, you would send this to your backend API
-    // For now, we'll simulate a submission
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      // For now, we'll just log it and show success
-      console.log('Form submitted:', formData)
-      
-      setStatus('success')
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        message: '',
+      // Using Formspree to handle form submissions
+      // Sign up at formspree.io and replace YOUR_FORM_ID with your actual form ID
+      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          service: formData.service,
+          message: formData.message,
+          _subject: `New Contact Form Submission from ${formData.name}`,
+        }),
       })
 
-      // Reset success message after 5 seconds
-      setTimeout(() => setStatus('idle'), 5000)
+      if (response.ok) {
+        setStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          service: '',
+          message: '',
+        })
+        // Reset success message after 5 seconds
+        setTimeout(() => setStatus('idle'), 5000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 5000)
+      }
     } catch (error) {
+      console.error('Form submission error:', error)
       setStatus('error')
       setTimeout(() => setStatus('idle'), 5000)
     }

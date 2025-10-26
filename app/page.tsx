@@ -35,8 +35,19 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="gradient-bg text-white pt-32 pb-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative text-white pt-32 pb-20 px-4 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+            alt="Digital Innovation Background"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-adi-navy/95 via-adi-dark-blue/90 to-adi-blue/85"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
