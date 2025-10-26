@@ -21,8 +21,8 @@ export async function POST(request: Request) {
         'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
       },
           body: JSON.stringify({
-            from: 'Arin Digital Website <onboarding@resend.dev>',
-            to: 'arin@arindigital.com', // Must match your Resend account email
+            from: 'Website <contact@arindigital.com>',
+            to: 'arin@arindigital.com',
         subject: `New Contact Form: ${service} - ${name}`,
         html: `
           <h2>New Contact Form Submission</h2>
