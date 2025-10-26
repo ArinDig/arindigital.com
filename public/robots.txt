@@ -1,0 +1,11 @@
+# robots.txt for arindigital.com
+
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (add as needed)
+# Disallow: /admin/
+
+# Sitemap
+Sitemap: https://arindigital.com/sitemap.xml
+

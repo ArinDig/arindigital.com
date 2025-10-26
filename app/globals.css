@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-adi-blue hover:bg-adi-dark-blue text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 text-adi-blue font-semibold py-3 px-8 rounded-lg transition-all duration-300 border-2 border-adi-blue;
+  }
+  
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold text-adi-navy mb-6;
+  }
+  
+  .section-subheading {
+    @apply text-xl md:text-2xl text-gray-600 mb-12;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-adi-navy via-adi-dark-blue to-adi-blue;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
