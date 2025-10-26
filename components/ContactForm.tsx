@@ -18,9 +18,8 @@ export default function ContactForm() {
     setStatus('submitting')
 
     try {
-      // Using Formspree to handle form submissions
-      // Sign up at formspree.io and replace YOUR_FORM_ID with your actual form ID
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      // Using Resend via our API route
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +30,6 @@ export default function ContactForm() {
           company: formData.company,
           service: formData.service,
           message: formData.message,
-          _subject: `New Contact Form Submission from ${formData.name}`,
         }),
       })
 
