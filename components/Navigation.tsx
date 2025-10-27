@@ -39,9 +39,9 @@ export default function Navigation() {
             <Image
               src="/logo-transparent.png"
               alt="Arin Digital Innovations"
-              width={200}
-              height={60}
-              className="h-16 w-auto"
+              width={280}
+              height={80}
+              className="h-20 w-auto"
             />
           </Link>
 
