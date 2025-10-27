@@ -39,11 +39,11 @@ export default function Home() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-            alt="Digital Innovation Background"
+            src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2532&auto=format&fit=crop"
+            alt="AI and Digital Innovation"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-adi-navy/95 via-adi-dark-blue/90 to-adi-blue/85"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-adi-navy/75 via-adi-dark-blue/70 to-adi-blue/65"></div>
         </div>
         
         {/* Content */}
