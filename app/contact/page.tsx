@@ -41,8 +41,19 @@ export default function Contact() {
   return (
     <>
       {/* Hero Section */}
-      <section className="gradient-bg text-white pt-32 pb-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="relative text-white pt-32 pb-20 px-4 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2532&auto=format&fit=crop"
+            alt="AI Technology"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-adi-navy/75 via-adi-dark-blue/70 to-adi-blue/65"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
             Let's Start a Conversation
           </h1>

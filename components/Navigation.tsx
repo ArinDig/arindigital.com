@@ -39,17 +39,10 @@ export default function Navigation() {
             <Image
               src="/logo-transparent.png"
               alt="Arin Digital Innovations"
-              width={50}
-              height={50}
-              className="w-12 h-12"
+              width={200}
+              height={60}
+              className="h-16 w-auto"
             />
-            <span
-              className={`text-xl font-bold transition-colors ${
-                isScrolled ? 'text-adi-navy' : 'text-white'
-              }`}
-            >
-              Arin Digital Innovations
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
