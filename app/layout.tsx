@@ -4,6 +4,7 @@ import './globals.css'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import StructuredData from '@/components/StructuredData'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -64,6 +65,7 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />
