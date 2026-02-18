@@ -108,7 +108,7 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-adi-blue mb-2">
