@@ -26,9 +26,8 @@ export default function Home() {
   ]
 
   const stats = [
-    { number: '50+', label: 'Clients Served' },
     { number: '99%', label: 'Client Satisfaction' },
-    { number: '10+', label: 'Years Experience' },
+    { number: '20+', label: 'Years Experience' },
     { number: '100%', label: 'Dedicated Support' },
   ]
 
